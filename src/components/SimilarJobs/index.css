@@ -1,0 +1,49 @@
+.similar-container {
+  background-color: #202020;
+  background-size: cover;
+  border-radius: 10px;
+  margin: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.rows-contai {
+  display: flex;
+}
+.backend {
+  color: #ffffffff;
+}
+.starrr {
+  color: #ffffffff;
+  margin-left: 5px;
+}
+.ee {
+  display: flex;
+}
+.ii {
+  color: #fbbf24;
+  margin-top: 10px;
+}
+.bal {
+  color: #ffffffff;
+}
+.pad {
+  color: #ffffffff;
+}
+.similar {
+  height: 70px;
+  width: 70px;
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.lo {
+  color: #ffffffff;
+  padding-left: 10px;
+}
+.p {
+  color: #ffffffff;
+  margin-top: 12px;
+  margin-left: 10px;
+}
