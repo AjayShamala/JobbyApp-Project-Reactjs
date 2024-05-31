@@ -151,32 +151,28 @@ class AllJobs extends Component {
     }
   }
   onGetProfileView = () => {
-    const {profileData, responseSuccess} = this.state
-    if (responseSuccess) {
-      const {name, shortBio, profileImageUrl} = profileData[0]
-      return (
-        <div className='const'>
-          <img src={profileImageUrl} alt={name} className='images' />
-          <h1 className='image-heds'>{name}</h1>
-          <p className='at-description'>{shortBio}</p>
-        </div>
-      )
-    }
-    return null
+    const {name, shortBio, profileImageUrl} = profileData[0]
+    return (
+      <div className="const">
+        <img src={profileImageUrl} alt={name} className="images" />
+        <h1 className="image-heds">{name}</h1>
+        <p className="at-description">{shortBio}</p>
+      </div>
+    )
   }
   onRetryProfileView = () => {
     this.getProfileData()
   }
   onFailureProfileData = () => (
-    <div className='but'>
-      <button onClick={this.onRetryProfileView} className='n'>
+    <div className="but">
+      <button onClick={this.onRetryProfileView} className="n">
         Retry
       </button>
     </div>
   )
   renderLoadingView = () => (
-    <div className='loader-container' data-testid='loader'>
-      <Loader type='ThreeDots' color='#ffffff' height='50' width='50' />
+    <div className="loader-container" data-testid="loader">
+      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
   onRenderProfileView = () => {
@@ -196,17 +192,17 @@ class AllJobs extends Component {
     this.getJobData()
   }
   onRenderFailureJob = () => (
-    <div className='failure-view'>
+    <div className="failure-view">
       <img
-        src='https://assets.ccbp.in/frontend/react-js/failure-img.png'
-        alt='failure view'
-        className='fails'
+        src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
+        alt="failure view"
+        className="fails"
       />
-      <h1 className='goat'>Oops! Something Went Wrong</h1>
-      <p className='wrong'>
+      <h1 className="goat">Oops! Something Went Wrong</h1>
+      <p className="wrong">
         We cannot seem to find the page you are looking far
       </p>
-      <button onClick={this.onRetryJobDetails} className='jbs'>
+      <button onClick={this.onRetryJobDetails} className="jbs">
         Retry
       </button>
     </div>
@@ -215,19 +211,19 @@ class AllJobs extends Component {
     const {jobData} = this.state
     const noJobs = jobData.length === 0
     return noJobs ? (
-      <div className='nojobs'>
+      <div className="nojobs">
         <img
-          src='https://assets.ccbp.in/frontend/react-js/no-jobs-img.png'
-          alt='no jobs'
-          className='image-20'
+          src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"
+          alt="no jobs"
+          className="image-20"
         />
-        <h1 className='nojobs-found'>No Jobs Found</h1>
-        <p className='para-found'>
+        <h1 className="nojobs-found">No Jobs Found</h1>
+        <p className="para-found">
           We could not find any jobs.Try other filters.
         </p>
       </div>
     ) : (
-      <ul className='unorders'>
+      <ul className="unorders">
         {jobData.map(each => (
           <JobCard key={each.id} allJobsData={each} />
         ))}
@@ -248,15 +244,16 @@ class AllJobs extends Component {
     }
   }
   onGetCheckBoxesView = () => (
-    <ul className='box-container'>
+    <ul className="box-container">
       {employmentTypesList.map(each => (
-        <li className='consssss' key={each.employmentTypeId}>
+        <li className="consssss" key={each.employmentTypeId}>
           <input
-            type='checkbox'
+            type="checkbox"
             onChange={this.onGetInputOption}
             id={each.employmentTypeId}
+            className="inpu"
           />
-          <label htmlFor={each.employmentTypeId} className='labs'>
+          <label htmlFor={each.employmentTypeId} className="labs">
             {each.label}
           </label>
         </li>
@@ -264,15 +261,16 @@ class AllJobs extends Component {
     </ul>
   )
   onGetradioBoxesView = () => (
-    <ul className='box-container'>
+    <ul className="box-container">
       {salaryRangesList.map(each => (
-        <li className='consssss' key={each.salaryRangeId}>
+        <li className="consssss" key={each.salaryRangeId}>
           <input
-            type='checkbox'
+            type="radio"
             onChange={this.onChangeRadioInput}
             id={each.salaryRangeId}
+            className="inpu"
           />
-          <label htmlFor={each.salaryRangeId} className='labs'>
+          <label htmlFor={each.salaryRangeId} className="labs">
             {each.label}
           </label>
         </li>
@@ -293,31 +291,62 @@ class AllJobs extends Component {
   render() {
     const {searchInput} = this.state
     return (
-      <div className='frontend'>
+      <div className="frontend">
         <Header />
-        <div>
-          {this.onRenderProfileView()}
-          <hr />
-          <h1 className='white'>Type of Employment</h1>
-          {this.onGetCheckBoxesView()}
-          <hr />
-          <h1 className='white'>Salary Range</h1>
-          {this.onGetradioBoxesView()}
-        </div>
-        <div className='column-container'>
-          <div className='rowssss'>
+        <div className="f">
+          <div className="rowssss">
             <input
-              type='search'
-              className='inputs'
+              type="search"
+              className="inputs"
               value={searchInput}
               onChange={this.onGetSearchInput}
               onKeyDown={this.onSubmitKeyDown}
             />
-            <button onClick={this.onSubmitSearchInput} className='buts'>
-              <AiOutlineSearch size='26' />
+            <button
+              onClick={this.onSubmitSearchInput}
+              data-testid="searchButton"
+              className="buts"
+            >
+              <AiOutlineSearch className="b" size="40" />
             </button>
           </div>
-          {this.onRenderAllJobs()}
+          <div>
+            {this.onRenderProfileView()}
+            <div className="cccc">
+              <img
+                src="https://srcwap.com/wp-content/uploads/2022/08/blank-profile-picture-hd-images-photo.jpg"
+                alt="img"
+                className="images"
+              />
+              <h1 className="image-heds">Shyamala Ajay Kumar</h1>
+              <p className="at-description">Full stack Developer</p>
+            </div>
+            <hr />
+            <h1 className="white">Type of Employment</h1>
+            {this.onGetCheckBoxesView()}
+            <hr />
+            <h1 className="white">Salary Range</h1>
+            {this.onGetradioBoxesView()}
+          </div>
+          <div className="column-container">
+            <div className="rowssss">
+              <input
+                type="search"
+                className="inputsss"
+                value={searchInput}
+                onChange={this.onGetSearchInput}
+                onKeyDown={this.onSubmitKeyDown}
+              />
+              <button
+                onClick={this.onSubmitSearchInput}
+                data-testid="searchButton"
+                className="buts"
+              >
+                <AiOutlineSearch className="l" size="40" />
+              </button>
+            </div>
+            {this.onRenderAllJobs()}
+          </div>
         </div>
       </div>
     )
