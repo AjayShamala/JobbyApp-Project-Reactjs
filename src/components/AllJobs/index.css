@@ -1,0 +1,126 @@
+@media screen and (max-width: 768px) {
+  .frontend {
+    background-color: #000000;
+    background-size: cover;
+  }
+  .inputs {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #7e858e;
+  }
+  .rowssss {
+    text-align: center;
+  }
+  .buts {
+    background-color: transparent;
+    border-width: 0px;
+    margin-right: 36px;
+  }
+  .b {
+    color: #ffffffff;
+    padding-top: 24px;
+  }
+  .cccc {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+    background-size: cover;
+    margin: 30px;
+    padding-left: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .images {
+    width: 25%;
+  }
+  .inputsss {
+    display: none;
+  }
+  .image-heds {
+    color: #6366f1;
+    font-family: 'Roboto';
+    font-size: 24px;
+  }
+  .at-description {
+    font-family: 'Roboto';
+    font-size: 14px;
+  }
+  .labs {
+    color: #ffffffff;
+    margin: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .frontend {
+    background-color: #000000;
+    background-size: cover;
+  }
+  .f {
+    display: flex;
+  }
+  .inputs {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #7e858e;
+    display: none;
+  }
+  .rowssss {
+    text-align: center;
+  }
+  .buts {
+    background-color: transparent;
+    border-width: 0px;
+    margin-right: 36px;
+  }
+  .b {
+    color: #ffffffff;
+    padding-top: 24px;
+    display: none;
+  }
+  .cccc {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+    background-size: cover;
+    margin: 30px;
+    padding-left: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 15vw;
+  }
+  .images {
+    width: 70px;
+  }
+  .inputsss {
+    width: 20vw;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b6c5ff;
+    height: 4vh;
+    color: #cbd5e1;
+  }
+  .image-heds {
+    color: #6366f1;
+    font-family: 'Roboto';
+    font-size: 17px;
+  }
+  .at-description {
+    font-family: 'Roboto';
+    font-size: 14px;
+  }
+  .labs {
+    color: #ffffffff;
+    margin: 14px;
+  }
+  .buts {
+    color: #ffffffff;
+  }
+  .l {
+    padding-top: 20px;
+  }
+}
