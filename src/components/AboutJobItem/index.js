@@ -2,6 +2,8 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {MdLocationOn} from 'react-icons/md'
 import {AiFillStar} from 'react-icons/ai'
+import {BsBriefcaseFill} from 'react-icons/bs'
+
 import {BiLinkExternal} from 'react-icons/bi'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
@@ -93,59 +95,62 @@ class AboutJobItem extends Component {
         title,
       } = jobStatus[0]
       return (
-        <div className="facebook-container">
-          <div className="cons">
-            <img
-              src={companyLogoUrl}
-              alt="job details company logo"
-              className="image-2"
-            />
-            <div>
-              <h1 className="headss">{title}</h1>
-              <div className="stars">
-                <AiFillStar size="20" />
-                <p className="para-rating">{rating}</p>
+        <div>
+          <div className="facebook-container">
+            <div className="cons">
+              <img
+                src={companyLogoUrl}
+                alt="job details company logo"
+                className="image-2"
+              />
+              <div>
+                <h1 className="headss">{title}</h1>
+                <div className="stars">
+                  <AiFillStar size="20" className="g" />
+                  <p className="para-rating">{rating}</p>
+                </div>
+              </div>
+            </div>
+            <div className="row-container">
+              <div className="row">
+                <MdLocationOn size="25" className="x" />
+                <p className="location">{location}</p>
+                <BsBriefcaseFill size="25" className="x" />
+                <p className="location">{employmentType}</p>
+              </div>
+              <p className="para-package">{packagePerAnnum}</p>
+            </div>
+            <hr className="horizontal-container" />
+            <div className="visit-container">
+              <h1 className="description-container">Description</h1>
+              <a href={companyWebsiteUrl} className="class-container">
+                Visit <BiLinkExternal />
+              </a>
+            </div>
+            <p className="pass-container">{jobDescription}</p>
+            <h1 className="description-container">Skills</h1>
+            <ul className="unorder-container">
+              {skills.map(each => (
+                <li className="list-container" key={each.name}>
+                  <img src={each.imageUrl} className="n" alt={each.name} />
+                  <p className="parssss">{each.name}</p>
+                </li>
+              ))}
+            </ul>
+            <div className="image-containers">
+              <h1 className="description-container">Life at Company</h1>
+              <div className="k">
+                <p className="company">{lifeAtCompany.description}</p>
+
+                <img
+                  src={lifeAtCompany.imageUrl}
+                  alt="life at company"
+                  className="image-10"
+                />
               </div>
             </div>
           </div>
-          <div className="row-container">
-            <div className="row">
-              <MdLocationOn size="25" />
-              <p className="location">{location}</p>
-
-              <p className="location">{employmentType}</p>
-            </div>
-            <p className="para-package">{packagePerAnnum}</p>
-          </div>
-          <hr className="horizontal-container" />
-          <div className="visit-container">
-            <h1 className="description-container">Description</h1>
-            <a href={companyWebsiteUrl} className="class-container">
-              Visit <BiLinkExternal />
-            </a>
-          </div>
-          <p className="pass-container">{jobDescription}</p>
-          <h1 className="description-container">Skills</h1>
-          <ul className="unorder-container">
-            {skills.map(each => (
-              <li className="list-container" key={each.name}>
-                <img src={each.imageUrl} alt={each.name} />
-                <p className="parssss">{each.name}</p>
-              </li>
-            ))}
-          </ul>
-          <div className="image-containers">
-            <div>
-              <h1 className="description-container">Life at Company</h1>
-              <p className="company">{lifeAtCompany.description}</p>
-            </div>
-            <img
-              src={lifeAtCompany.imageUrl}
-              alt="life at company"
-              className="image-10"
-            />
-          </div>
-          <h1 className="description-container">Similar Jobs</h1>
+          <h1 className="description-containers">Similar Jobs</h1>
           <ul className="unorder-list">
             {similarJobs.map(each => (
               <SimilarJobs key={each.id} similarJobsData={each} />
@@ -168,7 +173,7 @@ class AboutJobItem extends Component {
       />
       <h1 className="oops-heading">Oops! Something Went Wrong</h1>
       <p className="oops-para">
-        We cannot seen to find the page you are looking for.
+        We cannot seem to find the page you are looking for
       </p>
       <button className="button-containers" onClick={this.onGetRetryData}>
         Retry
