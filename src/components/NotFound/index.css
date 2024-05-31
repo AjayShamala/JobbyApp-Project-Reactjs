@@ -1,0 +1,14 @@
+.not-image {
+  width: 50%;
+}
+.not-heading {
+  color: #ffffffff;
+  font-size: 20px;
+}
+.not-para {
+  color: #ffffffff;
+  font-size: 14px;
+}
+.not-container {
+  text-align: center;
+}
