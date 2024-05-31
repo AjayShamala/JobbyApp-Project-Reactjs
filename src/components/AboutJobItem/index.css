@@ -1,0 +1,112 @@
+.company-container {
+  background-color: #272727;
+  background-size: cover;
+}
+.facebook-container {
+  background-color: #64748b;
+  margin: 50px;
+  border-radius: 40px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.cons {
+  display: flex;
+}
+.para-rating {
+  color: #ffffffff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.stars {
+  display: flex;
+  margin-left: 20px;
+}
+.headss {
+  color: #ffffffff;
+  font-size: 24px;
+  font-family: Roboto;
+
+  margin-left: 20px;
+}
+.g {
+  color: #fbbf24;
+  margin-top: 26px;
+}
+.image-2 {
+  width: 110px;
+
+  height: 110px;
+}
+.row-container {
+  display: flex;
+  justify-content: space-between;
+}
+.row {
+  display: flex;
+}
+.x {
+  color: #ffffffff;
+  margin-top: 13px;
+}
+.location {
+  color: #ffffffff;
+  margin-left: 7px;
+  margin-right: 10px;
+}
+.para-package {
+  color: #ffffffff;
+  padding-right: 24px;
+  font-weight: bold;
+}
+.visit-container {
+  display: flex;
+  justify-content: space-between;
+}
+.class-container {
+  text-decoration: dashed;
+  padding-right: 40px;
+  font-size: 20px;
+}
+.pass-container {
+  color: #ffffffff;
+  font-size: 20px;
+  padding-right: 20px;
+}
+.unorder-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.list-container {
+  display: flex;
+}
+.n {
+  width: 50%;
+}
+.parssss {
+  color: #ffffffff;
+  margin-left: 4px;
+  text-align: center;
+  margin-top: 20px;
+}
+.company {
+  color: #ffffffff;
+}
+.k {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 70px;
+}
+.unorder-list {
+  display: flex;
+  margin: 20px;
+}
+.description-containers {
+  margin-left: 20px;
+  color: #ffffffff;
+}
+.science {
+  display: flex;
+}
